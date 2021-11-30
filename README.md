@@ -1,1 +1,3 @@
-# algorithm-training
+# 알고리즘 연습
+javascript로 알고리즘 코드를 올립니다.
+프로그래머스에 문제를 풀고 있습니다.
