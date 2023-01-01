@@ -21,3 +21,18 @@ function solution(s) {
   }
   return answer;
 }
+
+// Ref 1 (재귀 활용)
+function solution(s, count = 0) {
+  if (!s) return count;
+  let [first, ...rest] = s.split("");
+  let countSame = 1;
+  let countInSame = 0;
+  let i = 0;
+  for (; i < rest.length; i++) {
+    if (rest[i] === first) countSame++;
+    else countInSame++;
+    if (countSame === countInSame) break;
+  }
+  return solution(rest.slice(i + 1).join(""), count + 1);
+}
