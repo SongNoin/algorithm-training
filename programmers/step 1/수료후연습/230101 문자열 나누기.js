@@ -1,4 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/140108
+
+// 내 풀이
 function solution(s) {
   let answer = 1;
   let x = s[0];
@@ -14,11 +16,7 @@ function solution(s) {
       noXCnt = 0;
       i = 0;
     }
-    if (s[i] === x) {
-      xCnt++;
-    } else {
-      noXCnt++;
-    }
+    s[i] === x ? xCnt++ : noXCnt++;
     i++;
   }
   return answer;
