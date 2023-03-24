@@ -16,3 +16,18 @@ function solution(n, m, section) {
 
   return answer;
 }
+
+// 다른사람 풀이
+// 내 방법과 같지만 for문 하나로 해결해서 인상깊었다.
+
+function solution(n, m, sections) {
+  var answer = 0;
+  var painted = 0;
+  for (var section of sections) {
+    if (painted < section) {
+      answer++;
+      painted = section + m - 1;
+    }
+  }
+  return answer;
+}
