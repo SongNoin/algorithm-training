@@ -35,6 +35,23 @@ function solution(array, commands) {
   return answer;
 }
 
+// 내 풀이 (20230526)
+function solution(array, commands) {
+  let answer = [];
+  let temp = [];
+  for (let i = 0; i < commands.length; i++) {
+    const [startIndex, lastIndex, k] = [
+      commands[i][0],
+      commands[i][1],
+      commands[i][2],
+    ];
+    temp = array.slice(startIndex - 1, lastIndex);
+    temp.sort((a, b) => a - b);
+    answer.push(temp[k - 1]);
+  }
+  return answer;
+}
+
 // Reference 1
 
 // function solution(array, commands) {
